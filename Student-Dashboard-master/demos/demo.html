@@ -1,0 +1,70 @@
+<html class="gr__127_0_0_1"><head>
+        <title>NITH Dashboard</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://code.highcharts.com/highcharts.js"></script> 
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+            google.charts.load('current', {packages: ['table']});     
+        </script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/46.2/loader.js"></script>
+    <link id="load-css-0" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/46.2/css/core/tooltip.css"><link id="load-css-1" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/46.2/css/util/util.css"><link id="load-css-2" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/46.2/css/table/table.css"><link id="load-css-3" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/46.2/css/util/format.css"><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/46.2/js/jsapi_compiled_format_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/46.2/js/jsapi_compiled_default_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/46.2/js/jsapi_compiled_ui_module.js"></script><script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/46.2/js/jsapi_compiled_table_module.js"></script></head>
+    <body data-gr-c-s-loaded="true">
+        <!-- <nav class="navbar navbar-default bg-dark">
+  <a class="navbar-brand" href="/">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/about">About <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav> -->
+
+        <div class="container">
+            
+        <br>
+        <!-- changes I made -->
+        <div id="chart"></div>
+        <script language="JavaScript">
+            var i;
+            for(i=0; i<1; i++) {
+                $(document).ready(function() {
+                var title = {
+                   text: 'Semester ' + i + ' results - Subject wise'   
+                };
+                var series =  [{
+                      name: 'Grades',
+                      data: [9.0, 10.0, 9.0, 9.0, 8.0, 8.0, 9.0, 9.0, 8.0, 9.0]
+                   }
+                ];
+                var xAxis = {
+                   title: {
+                      text: 'Subjects'
+                   }
+                }; 
+                var yAxis = {
+                   title: {
+                      text: 'Semester ' + i + ' grades'
+                   },
+                }; 
+
+                var json = {};
+                json.title = title;
+                json.yAxis = yAxis;
+                json.xAxis = xAxis;
+                json.series = series;
+                
+                $('#chart').highcharts(json);
+            });
+            }
+        </script>
+    </div>
+
+        </div>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    
+</body></html>

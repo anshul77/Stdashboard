@@ -1,0 +1,81 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <style>
+        div.jumbotron.text-center {
+            margin-top: 20px;
+        }
+        img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+    </style>
+    <div class="jumbotron text-center">
+        <h1></h1>
+        <h1>Welcome to the Student's dashboard!</h1>
+        <p class="lead">An application to visualize the results of a student at NITH in an interactive way. Also provides the the facility to forecast the sgpi of the student of next semester.</p>
+    </div>
+    <!-- changes I made -->
+    <br>
+    <div id="contain"></div>
+    <img src="/static/logo.png" style="width:50%;">
+        <!-- <script language = "JavaScript">
+            $(document).ready(function() {
+            // Original data
+            var data = [  
+               {  
+                  "name":"cgpi < 4",
+                  "y": {{ data[0] }}
+               },
+               {
+                    "name" : "cgpi 4 - 6",
+                    "y" : {{ data[1] }}
+               },
+               {  
+                  "name":"cgpi 6 - 7",
+                  "y": {{ data[2] }}
+               },
+               {
+                    "name" : "cgpi 7 - 8",
+                    "y" : {{ data[3] }}
+               },
+               {
+                    "name" : "cgpi 8 - 9",
+                    "y" : {{ data[4] }}
+               },
+               {
+                    "name" : "cgpi 9 - 10",
+                    "y" : {{ data[5] }}
+               }
+            ];
+
+            var chart = new Highcharts.Chart({
+                chart: {
+                    renderTo: 'contain',
+                    type: 'pie'
+                },
+                series: [{
+                  name: 'CGPI',
+                  data: data
+                }],
+                title: {
+                    text: 'Academic results of the institute, summarized'
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.2f}%</b>'
+                },
+                plotOptions: {
+                  pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                      enabled: false
+                    },
+                  showInLegend: true
+                  }
+                }
+            });
+            });
+      </script> -->
+{% endblock %}
